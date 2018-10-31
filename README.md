@@ -1,4 +1,4 @@
-# NFYT
+# NFYT : https://medium.com/@asabya/noise-free-youtube-7e11c57063ba
 
 Chrome Plugin to remove `YouTube Mixes` and `Recommended` videos.
 
