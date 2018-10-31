@@ -1,0 +1,21 @@
+{
+  "name": "NFYT",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Noise Free Youtube",
+  "browser_action": {
+    "default_title": "NFYT!"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "run_at" :"document_end",
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["inject.js"]
+    }
+  ]
+}
