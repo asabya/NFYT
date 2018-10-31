@@ -1,5 +1,9 @@
-// this is the code which will be injected into a given page...
+// this is the code which will be injected into youtube...
+
+// Blacklisted channels, topics and titles
 var blacklist = ['YouTube Mixes', 'Recommended'];
+
+// Hides the blacklisted channels and titles on mouse scroll
 (function() {
   checkBlacklist();
   window.onscroll = function (e) {
