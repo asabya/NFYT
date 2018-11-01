@@ -10,7 +10,7 @@
     {
       "run_at" :"document_end",
       "matches": ["https://www.youtube.com/*"],
-      "js": ["inject.js"]
+      "js": ["nfty.js"]
     }
   ]
 }
