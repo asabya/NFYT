@@ -1,17 +1,22 @@
-// this is the code which will be injected into youtube...
-
-// Blacklisted channels, topics and titles
-var blacklist = ['YouTube Mixes', 'Recommended'];
-
 // Hides the blacklisted channels and titles on mouse scroll
+
+var blacklist = [];
+
+
 (function() {
-  checkBlacklist();
+  chrome.storage.sync.get({
+    blacklists: ''
+  }, function(items) {
+    blacklist = items.blacklists.split(',');
+    checkBlacklist();
+  });
   window.onscroll = function (e) {
     checkBlacklist();
   }
 })();
 
 function checkBlacklist() {
+  
   var list = document.querySelectorAll("#title.ytd-shelf-renderer");
   for (var item of list) {
     if(blacklist.indexOf(item.innerHTML) > -1){
