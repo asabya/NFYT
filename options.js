@@ -1,6 +1,11 @@
 // Saves options to chrome.storage
 function save_options() {
   var blacklists = document.getElementById('blacklist-input').value;
+  var blacklistArray = blacklists.split(',');
+  blacklistArray =blacklistArray.map(item => item.trim());
+   console.log(blacklistArray);
+  blacklists = blacklistArray.join(',');
+  console.log(blacklists);
   chrome.storage.sync.set({
     blacklists: blacklists
   }, function() {
