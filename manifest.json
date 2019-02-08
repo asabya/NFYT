@@ -1,6 +1,6 @@
 {
   "name": "NFYT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "Noise Free Youtube",
   "browser_action": {
