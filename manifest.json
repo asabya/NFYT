@@ -5,15 +5,15 @@
   "description": "Noise Free Youtube",
   "browser_action": {
     "default_title": "NFYT!",
-    "default_popup": "popup.html"
+    "default_popup": "./html/popup.html"
   },
-  "options_page": "options.html",
+  "options_page": "./html/options.html",
   "permissions": ["storage","http://*/*","https://*/*"],
   "content_scripts": [
     {
       "run_at" :"document_end",
       "matches": ["https://www.youtube.com/*"],
-      "js": ["nfty.js"]
+      "js": ["./js/nfty.js"]
     }
   ]
 }

@@ -1,0 +1,16 @@
+body {
+    background: cadetblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.blacklistWrapper {
+    width: 300px;
+}
+.blacklistWrapper .input-group {
+    margin-bottom: 10px;
+}
+.blacklistWrapper button {
+    float: right;
+}
