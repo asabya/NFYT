@@ -1,19 +1,22 @@
 {
   "name": "NFYT",
   "version": "0.0.2",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "Noise Free Youtube",
-  "browser_action": {
+  "action": {
     "default_title": "NFYT!",
-    "default_popup": "./html/popup.html"
+    "default_popup": "./popup.html"
   },
-  "options_page": "./html/options.html",
-  "permissions": ["storage","http://*/*","https://*/*"],
+  "options_page": "./options.html",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "*://*.example.org/"
+  ],
   "content_scripts": [
     {
       "run_at" :"document_end",
       "matches": ["https://www.youtube.com/*"],
-      "js": ["./js/nfty.js"]
+      "js": ["./nfty.js"]
     }
   ]
 }
